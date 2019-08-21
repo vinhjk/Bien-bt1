@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h3>Tinh diem trung binh</h3>
+
+Vat Li : <input type="text" id="txtVL">
+Hoa Hoc : <input type="text" id="txthh">
+Sinh Hoc: <input type="text" id="txtsh">
+<input type="button" id="tbc" value="Start" onclick="tinhtbc();">
+<label id="ketqua"></label>
+<script>
+    function tinhtbc() {
+        var vl = document.getElementById('txtVL');
+        var hh = document.getElementById('txthh');
+        var sh = document.getElementById('txtsh');
+        var tbc = document.getElementById('tbc');
+        tbc = (parseFloat(vl.value) + parseFloat(hh.value) + parseFloat(sh.value)) / 3;
+        var sum = (parseFloat(vl.value) + parseFloat(hh.value) + parseFloat(sh.value));
+        var tbcfix = tbc.toFixed(2);
+        var Sumfix = sum.toFixed(2);
+        alert('TBM : ' + tbcfix);
+        alert('Sum : ' + Sumfix);
+    }
+</script>
+</body>
+</html>
